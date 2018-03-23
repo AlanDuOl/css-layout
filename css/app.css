@@ -12,7 +12,6 @@
 .styles {
   border: 1px solid gray;
   border-radius: 5px;
-  box-shadow: 5px 5px red;
 }
 
 .container {
@@ -57,7 +56,7 @@
   grid-column-start: 1;
   grid-row-start: 2;
   grid-row-end: 4;
-  background-color: rgba(255, 0, 0, 255);
+  /* background-color: rgba(255, 0, 0, 255); */
   z-index: 2;
 }
 
@@ -65,7 +64,7 @@
   grid-column-start: 3;
   grid-row-start: 1;
   grid-row-end: 6;
-  background-color: rgba(0, 0, 255, 255);
+  /* background-color: rgba(0, 0, 255, 255); */
   z-index: 1;
 }
 
