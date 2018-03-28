@@ -36,7 +36,7 @@
   height: var(--height);
 }
 
-.grid-properties {
+.layout-properties {
   grid-column-start: 2;
   grid-row-start: 2;
   grid-row-end: 4;
