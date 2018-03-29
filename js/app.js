@@ -1,5 +1,11 @@
+let layoutType = "Layout type: Grid";
 
+printLayoutType();
 addBoxShadow();
+
+function printLayoutType(){
+  document.getElementById("layout").innerHTML = layoutType;
+}
 
 function addBoxShadow(){
     let select = document.querySelectorAll(".box");
@@ -23,3 +29,34 @@ function getParameterByName(name, url) {
     if (!results[2]) return "";
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+// <div>
+//   Display:
+//   <input type="radio" name="display" value="grid" checked>Grid
+//   <input type="radio" name="display" value="flex">Flex
+// </div>
+// <div>
+//   flex-direction:
+//   <input type="radio" name="flex-direction" value="row">row
+//   <input type="radio" name="flex-direction" value="column">column
+// </div>
+//   flex-wrap:
+//   <input type="radio" name="flex-wrap" value="nowrap">nowrap
+//   <input type="radio" name="flex-wrap" value="wrap">wrap
+// </div>
+// <div>
+//   flex-grow:
+//   <input type="radio" name="flex-grow" value="nowrap">nowrap
+//   <input type="radio" name="flex-grow" value="wrap">wrap
+// </div>
+// <div>
+//   flex-shrink:
+//   <input type="radio" name="flex-shrink" value="nowrap">nowrap
+//   <input type="radio" name="flex-shrink" value="wrap">wrap
+// </div>
+// <div>
+//   flex-basis:
+//   <input type="radio" name="flex-basis" value="auto">auto
+//   <input type="radio" name="flex-basis" value="auto">auto
+// </div>
+// <div>

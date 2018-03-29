@@ -8,7 +8,44 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+}
+
 .styles {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.prepertires-header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header-text {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+}
+
+.header-grid {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.header-flex {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center;
   border: 1px solid gray;
   border-radius: 5px;
 }

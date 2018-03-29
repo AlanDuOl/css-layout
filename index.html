@@ -8,9 +8,10 @@
 		<!-- <link type="text/css" href="bootstrap.css"> -->
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 	</head>
-
+	<body>
+		<h1>CSS layout test</h1>
 		<main class="container">
-				<div><h2>Layout: </h2></div>
+				<div><h2 id="layout"></h2></div>
 				<div class="styles" id="grid-container">
 					<div class="box">One</div>
 					<div class="box box-two">Two</div>
@@ -22,47 +23,18 @@
 						<div>Four-4</div>
 					</div>
 				</div>
-				<div><h2>Properties</h2></div>
+				<div class="prepertires-header">
+					<h2 class="header-text">Choose a layout type below</h2>
+					<h3 class="header-grid">Grid</h3><h3 class="header-flex">Flex</h3>
+				</div>
 				<div class="layout-properties styles">
 					<div>
 						<form id="display">
-							<div>
-								Display:
-								<input type="radio" name="display" value="grid" checked>Grid
-								<input type="radio" name="display" value="flex">Flex
-							</div>
-							<div>
-								flex-direction:
-								<input type="radio" name="flex-direction" value="row">row
-								<input type="radio" name="flex-direction" value="column">column
-							</div>
-								flex-wrap:
-								<input type="radio" name="flex-wrap" value="nowrap">nowrap
-								<input type="radio" name="flex-wrap" value="wrap">wrap
-							</div>
-							<div>
-								flex-grow:
-								<input type="radio" name="flex-grow" value="nowrap">nowrap
-								<input type="radio" name="flex-grow" value="wrap">wrap
-							</div>
-							<div>
-								flex-shrink:
-								<input type="radio" name="flex-shrink" value="nowrap">nowrap
-								<input type="radio" name="flex-shrink" value="wrap">wrap
-							</div>
-							<div>
-								flex-basis:
-								<input type="radio" name="flex-basis" value="auto">auto
-								<input type="radio" name="flex-basis" value="auto">auto
-							</div>
-							<div>
 							<input type="submit" value="Update">
 						</form>
 					</div>
 				</div>
 		</main>
-
-	<body>
 		<script src="js/app.js"></script>
 	</body>
 </html>
