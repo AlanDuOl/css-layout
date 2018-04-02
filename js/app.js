@@ -1,12 +1,44 @@
-let layoutType = "Layout type: Grid";
 
-printLayoutType();
 addBoxShadow();
+layoutChoice();
 
 function printLayoutType(){
-  document.getElementById("layout").innerHTML = layoutType;
+    document.getElementById("layout").innerHTML = "Layout type: Grid";
 }
 
+//function to be loaded wher grid layout is selected
+function gridLayoutProperties(){
+    let element = document.createElement("div");;
+    let div = document.getElementById("display").appendChild(element);
+    div.style.border = "1px solid grey";
+    div.style.width = "10px";
+    div.style.height = "10px";
+}
+
+//function to be loaded wher flex layout is selected
+function flexLayoutProperties(){
+
+}
+
+function layoutChoice(){
+    // TODO:
+      // -Aply only once depending on the active element
+    document.getElementById("header-grid").addEventListener("click", function(){
+        document.getElementById("layout").innerHTML = "Layout type: Grid";
+        document.getElementById("header-grid").style.backgroundColor = "green";
+        document.getElementById("header-flex").style.backgroundColor = "white";
+        gridLayoutProperties();
+        // "<div>Display: <input type='radio' name='display' value='grid' checked>Grid<input type='radio' name='display' value='flex'>Flex</div>"
+    });
+
+    document.getElementById("header-flex").addEventListener("click", function(){
+        document.getElementById("layout").innerHTML = "Layout type: Flex";
+        document.getElementById("header-flex").style.backgroundColor = "green";
+        document.getElementById("header-grid").style.backgroundColor = "white";
+    });
+}
+
+//Add/remove boxShadow of elements on mousever event
 function addBoxShadow(){
     let select = document.querySelectorAll(".box");
     select.forEach(function(currentVal, index, lisObjs){

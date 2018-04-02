@@ -30,24 +30,20 @@ h1 {
   text-align: center;
 }
 
-.header-grid {
+#header-grid {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
   text-align: center;
-  border: 1px solid gray;
-  border-radius: 5px;
 }
 
-.header-flex {
+#header-flex {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
   text-align: center;
-  border: 1px solid gray;
-  border-radius: 5px;
 }
 
 .container {
@@ -60,7 +56,7 @@ h1 {
 }
 
 /* grid layout */
-#grid-container {
+#layout-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(30px, auto);
