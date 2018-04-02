@@ -8,7 +8,7 @@
 		<!-- <link type="text/css" href="bootstrap.css"> -->
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 	</head>
-	<body onload="printLayoutType()">
+	<body onload="initialLoad()">
 		<h1>CSS layout test</h1>
 		<main class="container">
 				<div><h2 id="layout"></h2></div>
@@ -29,7 +29,35 @@
 				</div>
 				<div class="layout-properties styles">
 					<div>
-						<form id="display">
+						<form id="flex-form">flex
+							<div>
+							  flex-direction:
+							  <input type="radio" name="flex-direction" value="row">row
+							  <input type="radio" name="flex-direction" value="column">column
+							</div>
+							<div>
+							  flex-wrap:
+							  <input type="radio" name="flex-wrap" value="nowrap">nowrap
+							  <input type="radio" name="flex-wrap" value="wrap">wrap
+							</div>
+							<div>
+							  flex-grow:
+							  <input type="radio" name="flex-grow" value="nowrap">nowrap
+							  <input type="radio" name="flex-grow" value="wrap">wrap
+							</div>
+							<div>
+							  flex-shrink:
+							  <input type="radio" name="flex-shrink" value="nowrap">nowrap
+							  <input type="radio" name="flex-shrink" value="wrap">wrap
+							</div>
+							<div>
+							  flex-basis:
+							  <input type="radio" name="flex-basis" value="auto">auto
+							  <input type="radio" name="flex-basis" value="auto">auto
+							</div>
+							<input type="submit" value="Update">
+						</form>
+						<form id="grid-form">grid
 							<input type="submit" value="Update">
 						</form>
 					</div>

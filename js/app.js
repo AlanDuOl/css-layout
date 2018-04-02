@@ -2,40 +2,47 @@
 addBoxShadow();
 layoutChoice();
 
-function printLayoutType(){
-    document.getElementById("layout").innerHTML = "Layout type: Grid";
+function initialLoad(){
+  document.getElementById("layout").innerHTML = "Layout type: Grid";
+  document.getElementById("grid-form").style.display = "none";
+  document.getElementById("flex-form").style.display = "none";
 }
 
 //function to be loaded wher grid layout is selected
 function gridLayoutProperties(){
-    let element = document.createElement("div");;
-    let div = document.getElementById("display").appendChild(element);
-    div.style.border = "1px solid grey";
-    div.style.width = "10px";
-    div.style.height = "10px";
+  // let element = document.createElement("input");;
+  // let div = document.getElementById("display").appendChild(element);
+  // document.getElementById("display").innerHTML = "<div class='box'>Display:<input type='radio' name='display' value='grid' checked>Grid<input type='radio' name='display' value='flex'>Flex</div>";
+  // div.style.border = "1px solid grey";
+  // div.style.width = "10px";
+  // div.style.height = "10px";
+  document.getElementById("grid-form").style.display = "block";
+  document.getElementById("flex-form").style.display = "none";
 }
 
 //function to be loaded wher flex layout is selected
 function flexLayoutProperties(){
-
+  document.getElementById("flex-form").style.display = "block";
+  document.getElementById("grid-form").style.display = "none";
 }
 
 function layoutChoice(){
-    // TODO:
-      // -Aply only once depending on the active element
-    document.getElementById("header-grid").addEventListener("click", function(){
-        document.getElementById("layout").innerHTML = "Layout type: Grid";
-        document.getElementById("header-grid").style.backgroundColor = "green";
-        document.getElementById("header-flex").style.backgroundColor = "white";
-        gridLayoutProperties();
-        // "<div>Display: <input type='radio' name='display' value='grid' checked>Grid<input type='radio' name='display' value='flex'>Flex</div>"
-    });
+  // TODO:
+    // -Aply only once depending on the active element
+  document.getElementById("header-grid").addEventListener("click", function(){
+      document.getElementById("layout").innerHTML = "Layout type: Grid";
+      document.getElementById("header-grid").style.backgroundColor = "green";
+      document.getElementById("header-flex").style.backgroundColor = "white";
+      gridLayoutProperties();
+      // "<div>Display: <input type='radio' name='display' value='grid' checked>Grid<input type='radio' name='display' value='flex'>Flex</div>"
+  });
 
-    document.getElementById("header-flex").addEventListener("click", function(){
-        document.getElementById("layout").innerHTML = "Layout type: Flex";
-        document.getElementById("header-flex").style.backgroundColor = "green";
-        document.getElementById("header-grid").style.backgroundColor = "white";
-    });
+  document.getElementById("header-flex").addEventListener("click", function(){
+      document.getElementById("layout").innerHTML = "Layout type: Flex";
+      document.getElementById("header-flex").style.backgroundColor = "green";
+      document.getElementById("header-grid").style.backgroundColor = "white";
+      flexLayoutProperties();
+  });
 }
 
 //Add/remove boxShadow of elements on mousever event

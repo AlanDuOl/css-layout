@@ -30,6 +30,10 @@ h1 {
   text-align: center;
 }
 
+#display {
+  align-items: center;
+}
+
 #header-grid {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -70,6 +74,9 @@ h1 {
 }
 
 .layout-properties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(30px, auto);
   grid-column-start: 2;
   grid-row-start: 2;
   grid-row-end: 4;
