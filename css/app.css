@@ -135,6 +135,8 @@ h1 {
 
 .properties-div {
   display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 #header-propertie {
@@ -142,7 +144,14 @@ h1 {
 }
 
 .properties-box {
-  width: 33.3%;
+  width: 33%;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.properties-name {
+  width: 33%;
+  text-align: left;
 }
 
 .mouseEffects {
