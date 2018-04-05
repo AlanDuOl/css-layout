@@ -6,6 +6,7 @@
 /* page layout */
 * {
   box-sizing: border-box;
+  /* font:  */
 }
 
 h1 {
@@ -20,6 +21,8 @@ h1 {
 .prepertires-header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .header-text {
@@ -50,7 +53,7 @@ h1 {
   text-align: center;
 }
 
-.container {
+.main-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(30px, auto);
@@ -75,7 +78,7 @@ h1 {
 
 .layout-properties {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(30px, auto);
   grid-column-start: 2;
   grid-row-start: 2;
@@ -128,4 +131,20 @@ h1 {
   grid-row-start: 5;
   grid-row-end: 7;
   height: var(--height);
+}
+
+.properties-div {
+  display: flex;
+}
+
+#header-propertie {
+
+}
+
+.properties-box {
+  width: 33.3%;
+}
+
+.mouseEffects {
+
 }
