@@ -10,8 +10,12 @@
 	</head>
 	<body onload="initialLoad()">
 		<h1>CSS layout test</h1>
-		<main class="container">
-				<div><h2 id="layout"></h2></div>
+		<main class="main-container">
+				<div class="prepertires-header">
+					<h2 class="header-text">Choose a layout type below</h2>
+					<h3 class="box mouseEffects" id="header-grid">Grid</h3><h3 class="box mouseEffects" id="header-flex">Flex</h3>
+				</div>
+				<!-- <div><h2 id="layout"></h2></div> -->
 				<div class="styles" id="layout-container">
 					<div class="box">One</div>
 					<div class="box box-two">Two</div>
@@ -23,44 +27,39 @@
 						<div class="box">Four-4</div>
 					</div>
 				</div>
-				<div class="prepertires-header">
-					<h2 class="header-text">Choose a layout type below</h2>
-					<h3 class="box" id="header-grid">Grid</h3><h3 class="box" id="header-flex">Flex</h3>
-				</div>
 				<div class="layout-properties styles">
-					<div>
-						<form id="flex-form">flex
-							<div>
-							  flex-direction:
-							  <input type="radio" name="flex-direction" value="row">row
-							  <input type="radio" name="flex-direction" value="column">column
+					<section>
+						<div>Choose a porpertie</div>
+						<div id="flex-prop">
+							<div class="properties-div">
+								<div>Flex-direction:</div>
+								<div id="flex-direction-row" class="properties-box mouseEffects">row</div>
+								<div id="flex-direction-column" class="properties-box mouseEffects">column</div>
 							</div>
-							<div>
+							<div class="properties-div">
 							  flex-wrap:
 							  <input type="radio" name="flex-wrap" value="nowrap">nowrap
 							  <input type="radio" name="flex-wrap" value="wrap">wrap
 							</div>
-							<div>
+							<div class="properties-div">
 							  flex-grow:
 							  <input type="radio" name="flex-grow" value="nowrap">nowrap
 							  <input type="radio" name="flex-grow" value="wrap">wrap
 							</div>
-							<div>
+							<div class="properties-div">
 							  flex-shrink:
 							  <input type="radio" name="flex-shrink" value="nowrap">nowrap
 							  <input type="radio" name="flex-shrink" value="wrap">wrap
 							</div>
-							<div>
+							<div class="properties-div">
 							  flex-basis:
 							  <input type="radio" name="flex-basis" value="auto">auto
 							  <input type="radio" name="flex-basis" value="auto">auto
 							</div>
 							<input type="submit" value="Update">
-						</form>
-						<form id="grid-form">grid
-							<input type="submit" value="Update">
-						</form>
-					</div>
+						</div>
+						<div id="grid-prop"></div>
+					</section>
 				</div>
 		</main>
 		<script src="js/app.js"></script>
