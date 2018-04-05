@@ -3,9 +3,9 @@ mouseoverEffect();
 layoutChoice();
 
 function initialLoad(){
-  document.getElementById("layout").innerHTML = "Layout type: Grid";
-  document.getElementById("grid-form").style.display = "none";
-  document.getElementById("flex-form").style.display = "none";
+  document.getElementById("grid-prop").style.display = "none";
+  document.getElementById("flex-prop").style.display = "none";
+
 }
 
 //function to be loaded wher grid layout is selected
@@ -16,29 +16,32 @@ function gridLayoutProperties(){
   // div.style.border = "1px solid grey";
   // div.style.width = "10px";
   // div.style.height = "10px";
-  document.getElementById("grid-form").style.display = "block";
-  document.getElementById("flex-form").style.display = "none";
+  document.getElementById("grid-prop").style.display = "block";
+  document.getElementById("flex-prop").style.display = "none";
 }
 
 //function to be loaded wher flex layout is selected
 function flexLayoutProperties(){
-  document.getElementById("flex-form").style.display = "block";
-  document.getElementById("grid-form").style.display = "none";
+  document.getElementById("grid-prop").style.display = "none";
+  document.getElementById("flex-prop").style.display = "block";
 }
 
 function layoutChoice(){
   // TODO:
-    // -Aply only once depending on the active element
-  document.getElementById("header-grid").addEventListener("click", function(){
-      document.getElementById("layout").innerHTML = "Layout type: Grid";
-      document.getElementById("header-grid").style.backgroundColor = "green";
-      document.getElementById("header-flex").style.backgroundColor = "white";
-      gridLayoutProperties();
-      // "<div>Display: <input type='radio' name='display' value='grid' checked>Grid<input type='radio' name='display' value='flex'>Flex</div>"
+  let select = document.querySelectorAll(".mouseEffects");
+  select.forEach(function(currentVal, index, lisObjs){
+      currentVal.addEventListener("click", function(){
+          currentVal.style.backgroundColor = "green";
+          currentVal.style.backgroundClip = "content-box";
+          if(currentVal.id == "header-grid"){
+              gridLayoutProperties();
+          }
+
+      });
+
   });
 
   document.getElementById("header-flex").addEventListener("click", function(){
-      document.getElementById("layout").innerHTML = "Layout type: Flex";
       document.getElementById("header-flex").style.backgroundColor = "green";
       document.getElementById("header-grid").style.backgroundColor = "white";
       flexLayoutProperties();
@@ -47,7 +50,7 @@ function layoutChoice(){
 
 //Add/remove boxShadow of elements on mousever event
 function mouseoverEffect(){
-    let select = document.querySelectorAll(".box");
+    let select = document.querySelectorAll(".mouseEffects");
     select.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("mouseover", function() {
           currentVal.style.boxShadow = "1px 1px 0 3px hsl(0, 0%, 90%), 1px 1px 0 6px hsl(0, 0%, 60%), 1px 1px 0 10px hsl(0, 0%, 30%)";
