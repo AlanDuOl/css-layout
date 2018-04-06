@@ -36,29 +36,37 @@ function layoutChoice(){
           if(currentVal.id == "header-grid"){
               gridLayoutProperties();
           }
-
+          if(currentVal.id == "header-flex"){
+              flexLayoutProperties();
+          }
       });
-
-  });
-
-  document.getElementById("header-flex").addEventListener("click", function(){
-      document.getElementById("header-flex").style.backgroundColor = "green";
-      document.getElementById("header-grid").style.backgroundColor = "white";
-      flexLayoutProperties();
   });
 }
 
 //Add/remove boxShadow of elements on mousever event
 function mouseoverEffect(){
+
     let select = document.querySelectorAll(".mouseEffects");
     select.forEach(function(currentVal, index, lisObjs){
-        currentVal.addEventListener("mouseover", function() {
-          currentVal.style.boxShadow = "1px 1px 0 3px hsl(0, 0%, 90%), 1px 1px 0 6px hsl(0, 0%, 60%), 1px 1px 0 10px hsl(0, 0%, 30%)";
-          currentVal.style.cursor = "pointer";
-        });
-        currentVal.addEventListener("mouseout", function() {
-          currentVal.style.boxShadow = "0px 0px 0px #000";
-        });
+      console.log(currentVal.style.backgroundColor);
+
+        if(currentVal.style.backgroundColor != "green"){
+            currentVal.addEventListener("mouseover", function() {
+              //currentVal.style.boxShadow = "1px 1px 0 3px hsl(0, 0%, 90%), 1px 1px 0 6px hsl(0, 0%, 60%), 1px 1px 0 10px hsl(0, 0%, 30%)";
+              currentVal.style.transform = "scale(1) translate3d(-2px,0,0)";
+              currentVal.style.boxShadow = "2px 2px gray";
+              currentVal.style.backgroundColor = "rgb(58,231,88)";
+              currentVal.style.cursor = "pointer";
+            });
+            currentVal.addEventListener("mouseout", function() {
+
+                currentVal.style.transform = "scale(1) translate3d(0,0,0)";
+                currentVal.style.boxShadow = "0px 0px 0px #000";
+                currentVal.style.backgroundColor = "rgb(255,255,255)";
+
+            });
+        }
+
     });
 }
 
