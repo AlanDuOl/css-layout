@@ -21,21 +21,25 @@ function flexLayoutProperties(){
 }
 
 function layoutChoice(){
-  // TODO:
-  let select = document.querySelectorAll(".mouseEffects");
-  select.forEach(function(currentVal, index, lisObjs){
-      currentVal.addEventListener("click", function(){
-          currentVal.style.backgroundColor = "green";
-          currentVal.style.backgroundClip = "content-box";
-          console.log(currentVal.style.backgroundColor);
-          if(currentVal.id == "header-grid"){
-              gridLayoutProperties();
-          }
-          if(currentVal.id == "header-flex"){
-              flexLayoutProperties();
-          }
-      });
-  });
+    let select = document.querySelectorAll(".mouseEffects");
+    select.forEach(function(currentVal, index, lisObjs){
+        currentVal.addEventListener("click", function(){
+            //currentVal.style.backgroundColor = "green";
+            currentVal.style.value = "active";
+            // console.log(currentVal.style.value);
+            if(currentVal.style.value == "active"){
+                currentVal.style.backgroundColor = "green";
+                currentVal.style.backgroundClip = "content-box";
+            }
+            if(currentVal.id == "header-grid"){
+                gridLayoutProperties();
+                //Make only one prop op
+            }
+            if(currentVal.id == "header-flex"){
+                flexLayoutProperties();
+            }
+        });
+    });
 }
 
 //Add/remove boxShadow of elements on mousever event
