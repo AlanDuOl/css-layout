@@ -9,56 +9,57 @@
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 	</head>
 	<body onload="initialLoad()">
-		<h1>CSS layout test</h1>
+		<header>
+			<h1>CSS layout test</h1>
+			<div class="layout-type">
+				<h2 class="header-text">Choose a layout type below</h2>
+				<h3 class="box mouseEffects" id="header-grid">Grid</h3><h3 class="box mouseEffects" id="header-flex">Flex</h3>
+			</div>
+		</header>
 		<main class="main-container">
-				<div class="prepertires-header">
-					<h2 class="header-text">Choose a layout type below</h2>
-					<h3 class="box mouseEffects" id="header-grid">Grid</h3><h3 class="box mouseEffects" id="header-flex">Flex</h3>
+			<section class="styles" id="layout-container">
+				<div class="box">One</div>
+				<div class="box box-two">Two</div>
+				<div class="box box-three">Three</div>
+				<div class="box sub-container">
+					<div class="box">Four-1</div>
+					<div class="box">Four-2</div>
+					<div class="box">Four-3</div>
+					<div class="box">Four-4</div>
 				</div>
-				<div class="styles" id="layout-container">
-					<div class="box">One</div>
-					<div class="box box-two">Two</div>
-					<div class="box box-three">Three</div>
-					<div class="box sub-container">
-						<div class="box">Four-1</div>
-						<div class="box">Four-2</div>
-						<div class="box">Four-3</div>
-						<div class="box">Four-4</div>
+			</section>
+			<section class="layout-properties styles">
+				<div>Choose a porpertie</div>
+				<div id="flex-prop">
+					<div class="properties-div">
+						<div class="properties-name">Flex-direction:</div>
+						<div id="flex-direction-row" class="properties-box mouseEffects">row</div>
+						<div id="flex-direction-column" class="properties-box mouseEffects">column</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Flex-wrap:</div>
+						<div id="flex-wrap-wrap" class="properties-box mouseEffects">wrap</div>
+						<div id="flex-wrap-nowrap" class="properties-box mouseEffects">nowrap</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Flex-grow:</div>
+						<div id="flex-grow-0" class="properties-box mouseEffects">0</div>
+						<div id="flex-grow-1" class="properties-box mouseEffects">1</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Flex-basis:</div>
+						<div id="flex-basis" class="properties-box mouseEffects">wrap</div>
+						<div id="flex-basis" class="properties-box mouseEffects">nowrap</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Flex-shrink:</div>
+						<div id="flex-shrink" class="properties-box mouseEffects">auto</div>
+						<div id="flex-shrink" class="properties-box mouseEffects">auto</div>
 					</div>
 				</div>
-				<div class="layout-properties styles">
-					<section>
-						<div>Choose a porpertie</div>
-						<div id="flex-prop">
-							<div class="properties-div">
-								<div class="properties-name">Flex-direction:</div>
-								<div id="flex-direction-row" class="properties-box mouseEffects">row</div>
-								<div id="flex-direction-column" class="properties-box mouseEffects">column</div>
-							</div>
-							<div class="properties-div">
-								<div class="properties-name">Flex-wrap:</div>
-								<div id="flex-wrap-wrap" class="properties-box mouseEffects">wrap</div>
-								<div id="flex-wrap-nowrap" class="properties-box mouseEffects">nowrap</div>
-							</div>
-							<div class="properties-div">
-								<div class="properties-name">Flex-grow:</div>
-								<div id="flex-grow-0" class="properties-box mouseEffects">0</div>
-								<div id="flex-grow-1" class="properties-box mouseEffects">1</div>
-							</div>
-							<div class="properties-div">
-								<div class="properties-name">Flex-basis:</div>
-								<div id="flex-basis" class="properties-box mouseEffects">wrap</div>
-								<div id="flex-basis" class="properties-box mouseEffects">nowrap</div>
-							</div>
-							<div class="properties-div">
-								<div class="properties-name">Flex-shrink:</div>
-								<div id="flex-shrink" class="properties-box mouseEffects">auto</div>
-								<div id="flex-shrink" class="properties-box mouseEffects">auto</div>
-							</div>
-						</div>
-						<div id="grid-prop"></div>
-					</section>
+				<div id="grid-prop">
 				</div>
+			</section>
 		</main>
 		<script src="js/app.js"></script>
 	</body>

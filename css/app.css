@@ -13,12 +13,16 @@ h1 {
   text-align: center;
 }
 
+header {
+    padding: 5px;
+}
+
 .styles {
   border: 1px solid gray;
   border-radius: 5px;
 }
 
-.prepertires-header {
+.layout-type {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-start: 1;

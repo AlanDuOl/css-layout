@@ -22,11 +22,11 @@ function flexLayoutProperties(){
 
 function layoutChoice(){
     //Get the parent node
-    let obj = document.querySelector(".prepertires-header");
+    let obj = document.querySelector(".layout-types");
     //Get the children
     let chil = obj.children["header-grid"];
-
     let select = document.querySelectorAll(".mouseEffects");
+    console.log(select);
     select.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("click", function(){
             //currentVal.style.backgroundColor = "green";
