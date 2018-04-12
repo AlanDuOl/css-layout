@@ -21,6 +21,11 @@ function flexLayoutProperties(){
 }
 
 function layoutChoice(){
+    //Get the parent node
+    let obj = document.querySelector(".prepertires-header");
+    //Get the children
+    let chil = obj.children["header-grid"];
+
     let select = document.querySelectorAll(".mouseEffects");
     select.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("click", function(){
@@ -31,7 +36,8 @@ function layoutChoice(){
                 currentVal.style.backgroundColor = "green";
                 currentVal.style.backgroundClip = "content-box";
             }
-            if(currentVal.id == "header-grid"){
+            if(currentVal.id == "header-grid" && currentVal.style.value == "active"){
+                console.log(chil.style.backgroundColor);
                 gridLayoutProperties();
                 //Make only one prop op
             }
