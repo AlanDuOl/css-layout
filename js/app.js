@@ -1,11 +1,12 @@
 
+let select = document.querySelectorAll(".mouseEffects");
+
 mouseoverEffect();
 layoutChoice();
 
 function initialLoad(){
-  document.getElementById("grid-prop").style.display = "none";
-  document.getElementById("flex-prop").style.display = "none";
-
+    document.getElementById("grid-prop").style.display = "none";
+    document.getElementById("flex-prop").style.display = "none";
 }
 
 //function to be loaded wher grid layout is selected
@@ -21,36 +22,57 @@ function flexLayoutProperties(){
 }
 
 function layoutChoice(){
-    //Get the parent node
-    let obj = document.querySelector(".layout-types");
-    //Get the children
-    let chil = obj.children["header-grid"];
-    let select = document.querySelectorAll(".mouseEffects");
-    console.log(select);
+
+    let grid = document.getElementById("header-grid");
+    let flex = document.getElementById("header-flex");
+
     select.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("click", function(){
-            //currentVal.style.backgroundColor = "green";
             currentVal.style.value = "active";
-            // console.log(currentVal.style.value);
-            if(currentVal.style.value == "active"){
-                currentVal.style.backgroundColor = "green";
-                currentVal.style.backgroundClip = "content-box";
-            }
-            if(currentVal.id == "header-grid" && currentVal.style.value == "active"){
-                console.log(chil.style.backgroundColor);
+            if(currentVal.id == "header-grid"){
                 gridLayoutProperties();
-                //Make only one prop op
+                flex.style.value = "inactive";
             }
             if(currentVal.id == "header-flex"){
                 flexLayoutProperties();
+                grid.style.value = "inactive";
             }
+            setColor();
+            clearColor();
         });
+    });
+}
+
+function propertiesChoice(){
+    //Get the parent node
+    let parentNode = document.querySelector(".layout-type");
+    //Get the children
+    let grid = parentNode.children["header-grid"];
+    let flex = parentNode.children["header-flex"];
+}
+
+function setColor(){
+
+    select.forEach(function(currentVal, index, lisObjs){
+        if(currentVal.style.value == "active"){
+            currentVal.style.backgroundColor = "green";
+            currentVal.style.backgroundClip = "content-box";
+        }
+    });
+}
+
+function clearColor(){
+
+    select.forEach(function(currentVal, index, lisObjs){
+        if(currentVal.style.value == "inactive"){
+            currentVal.style.backgroundColor = "rgb(255,255,255)";
+        }
     });
 }
 
 //Add/remove boxShadow of elements on mousever event
 function mouseoverEffect(){
-    let select = document.querySelectorAll(".mouseEffects");
+
     select.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("mouseover", function() {
             //currentVal.style.boxShadow = "1px 1px 0 3px hsl(0, 0%, 90%), 1px 1px 0 6px hsl(0, 0%, 60%), 1px 1px 0 10px hsl(0, 0%, 30%)";
