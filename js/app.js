@@ -1,5 +1,8 @@
 
 let select = document.querySelectorAll(".mouseEffects");
+//if flex-prop or grid-prop
+//Get the parent node
+let parentNode = document.querySelectorAll(".properties-div");
 
 mouseoverEffect();
 layoutChoice();
@@ -37,18 +40,23 @@ function layoutChoice(){
                 flexLayoutProperties();
                 grid.style.value = "inactive";
             }
+            propertiesChoice(currentVal);
             setColor();
             clearColor();
         });
     });
 }
 
-function propertiesChoice(){
-    //Get the parent node
-    let parentNode = document.querySelector(".layout-type");
-    //Get the children
-    let grid = parentNode.children["header-grid"];
-    let flex = parentNode.children["header-flex"];
+function propertiesChoice(val){
+    //loop through the node and get the childs of each element in the node
+    parentNode.forEach(function(currentVal, index, lisObjs){
+        if(currentVal.children[1] == val){
+            currentVal.children[2].style.value = "inactive";
+        }
+        else if(currentVal.children[2] == val){
+            currentVal.children[1].style.value = "inactive"
+        }
+    });
 }
 
 function setColor(){
