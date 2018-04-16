@@ -3,6 +3,7 @@ let select = document.querySelectorAll(".mouseEffects");
 //if flex-prop or grid-prop
 //Get the parent node
 let parentNode = document.querySelectorAll(".properties-div");
+let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
 layoutChoice();
@@ -16,12 +17,14 @@ function initialLoad(){
 function gridLayoutProperties(){
     document.getElementById("grid-prop").style.display = "block";
     document.getElementById("flex-prop").style.display = "none";
+    layoutBox.style.display = "grid";
 }
 
 //function to be loaded wher flex layout is selected
 function flexLayoutProperties(){
     document.getElementById("grid-prop").style.display = "none";
     document.getElementById("flex-prop").style.display = "block";
+    layoutBox.style.display = "flex";
 }
 
 function layoutChoice(){
@@ -35,6 +38,7 @@ function layoutChoice(){
             if(currentVal.id == "header-grid"){
                 gridLayoutProperties();
                 flex.style.value = "inactive";
+
             }
             if(currentVal.id == "header-flex"){
                 flexLayoutProperties();
