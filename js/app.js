@@ -60,6 +60,11 @@ function propertiesChoice(val){
         else if(currentVal.children[2] == val){
             currentVal.children[1].style.value = "inactive"
         }
+        if(currentVal.children[1].style.value == "active"){
+            // layoutBox.style.currentVal.name = currentVal.id;
+            layoutBox.style.flexWrap = "wrap";
+            console.log(layoutBox.style.flexWrap);
+        }
     });
 }
 
