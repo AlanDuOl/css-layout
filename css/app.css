@@ -68,15 +68,15 @@ header {
 
 /* grid layout */
 #layout-container {
-    /* display: grid; */
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(30px, auto);
+    grid-row-gap: 5px;
+    grid-column-gap: 3px; */
     grid-column-start: 1;
     grid-row-start: 2;
     grid-row-end: 4;
     padding: 5px;
-    grid-row-gap: 5px;
-    grid-column-gap: 3px;
     height: var(--height);
 }
 
