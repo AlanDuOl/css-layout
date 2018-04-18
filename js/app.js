@@ -50,20 +50,24 @@ function layoutChoice(){
         });
     });
 }
-
+//Turn on and off the properties
 function propertiesChoice(val){
-    //loop through the node and get the childs of each element in the node
+    //loop through the node and perform operations on the childs of its elements
     parentNode.forEach(function(currentVal, index, lisObjs){
+        //Only childs 1 and 2 receive values
+        //So check the one who has been clicked and make its brother be inactive
         if(currentVal.children[1] == val){
             currentVal.children[2].style.value = "inactive";
         }
         else if(currentVal.children[2] == val){
             currentVal.children[1].style.value = "inactive"
         }
+        //Set the proper style to the exemple container element (layoutBox)
+        //Loop through the childs and set the properties values
         if(currentVal.children[1].style.value == "active"){
-            // layoutBox.style.currentVal.name = currentVal.id;
-            layoutBox.style.flexWrap = "wrap";
-            console.log(layoutBox.style.flexWrap);
+            layoutBox.style[currentVal.children[1].id] = currentVal.children[1].getAttribute("name");
+        }else if(currentVal.children[2].style.value == "active") {
+            layoutBox.style[currentVal.children[2].id] = currentVal.children[2].getAttribute("name");
         }
     });
 }
