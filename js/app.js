@@ -8,6 +8,7 @@ let layoutBox = document.getElementById("layout-container");
 mouseoverEffect();
 layoutChoice();
 
+//Function to be loaded on strat
 function initialLoad(){
     document.getElementById("grid-prop").style.display = "none";
     document.getElementById("flex-prop").style.display = "none";
@@ -27,6 +28,7 @@ function flexLayoutProperties(){
     layoutBox.style.display = "flex";
 }
 
+//Choose the layout type on click
 function layoutChoice(){
 
     let grid = document.getElementById("header-grid");
@@ -38,7 +40,6 @@ function layoutChoice(){
             if(currentVal.id == "header-grid"){
                 gridLayoutProperties();
                 flex.style.value = "inactive";
-
             }
             if(currentVal.id == "header-flex"){
                 flexLayoutProperties();
@@ -71,9 +72,10 @@ function propertiesChoice(val){
         }
     });
 }
-
+//Set a background color for the clicked element
 function setColor(){
-
+    //Loop through the clickeble elements and set its background color to green (only the content area)
+    //if the element is active
     select.forEach(function(currentVal, index, lisObjs){
         if(currentVal.style.value == "active"){
             currentVal.style.backgroundColor = "green";
@@ -81,9 +83,10 @@ function setColor(){
         }
     });
 }
-
+//Clear the background color of inactive elements
 function clearColor(){
-
+    //Loop through the clickeble elements and set its background color to white
+    //if the element is inactive
     select.forEach(function(currentVal, index, lisObjs){
         if(currentVal.style.value == "inactive"){
             currentVal.style.backgroundColor = "rgb(255,255,255)";
