@@ -30,11 +30,18 @@
 			</section>
 			<section class="layout-properties styles">
 				<div>Choose a porpertie</div>
+				<!--The flex layout properties go here  -->
 				<div id="flex-prop">
+					<!-- order of an specific element -->
+					<div class="properties-div">
+						<div class="properties-name">Order:</div>
+						<div name="row" id="align-content" class="properties-box mouseEffects">row</div>
+						<div name="column" id="align-content" class="properties-box mouseEffects">column</div>
+					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-direction:</div>
-						<div name="flex-direction" id="row" class="properties-box mouseEffects">row</div>
-						<div name="flex-direction" id="column" class="properties-box mouseEffects">column</div>
+						<div name="row" id="flex-direction" class="properties-box mouseEffects">row</div>
+						<div name="column" id="flex-direction" class="properties-box mouseEffects">column</div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-wrap:</div>
@@ -42,26 +49,134 @@
 						<div id="flexWrap" name="nowrap" class="properties-box mouseEffects">nowrap</div>
 					</div>
 					<div class="properties-div">
-						<div class="properties-name">Flex-grow:</div>
-						<select id="num" class="properties-box">
-							<option>1</option>
+						<div class="properties-name">Flex-shrink:</div>
+						<select class="properties-box">
 							<option>2</option>
+							<option>0.6</option>
+							<option>inherit</option>
+							<option>initial</option>
+							<option>unset</option>
+						</select>
+						<div id="flex-shrink" class="properties-box mouseEffects">Select</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Flex-grow:</div>
+						<select class="properties-box">
 							<option>3</option>
+							<option>0.6</option>
+							<option>inherit</option>
+							<option>initial</option>
+							<option>unset</option>
 						</select>
 						<div id="flex-grow" class="properties-box mouseEffects">Select</div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-basis:</div>
-						<div id="flex-basis" class="properties-box mouseEffects">wrap</div>
-						<div id="flex-basis" class="properties-box mouseEffects">nowrap</div>
+						<select class="properties-box">
+							<option>10em</option>
+							<option>3px</option>
+							<option>auto</option>
+							<option>fill</option>
+							<option>max-content</option>
+							<option>min-content</option>
+							<option>fit-content</option>
+							<option>content</option>
+							<option>inherit</option>
+							<option>initial</option>
+							<option>unset</option>
+						</select>
+						<div id="flex-basis" class="properties-box mouseEffects">Select</div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-shrink:</div>
-						<div id="flex-shrink" class="properties-box mouseEffects">auto</div>
-						<div id="flex-shrink" class="properties-box mouseEffects">auto</div>
+						<select class="properties-box">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select>
+						<div id="flex-shrink" class="properties-box mouseEffects">Select</div>
 					</div>
-
+					<div class="properties-div">
+						<div class="properties-name">Align-content:</div>
+						<select class="properties-box">
+							<option>start</option>
+							<option>center</option>
+							<option>space-between</option>
+							<option>space-around</option>
+							<option>flex-start</option>
+							<option>flex-end</option>
+							<option>normal</option>
+							<option>baseline</option>
+							<option>first baseline</option>
+							<option>last baseline</option>
+							<option>space-evenly</option>
+							<option>stretch</option>
+							<option>safe center</option>
+							<option>unsafe center</option>
+							<option>inherit</option>
+							<option>initial</option>
+							<option>unset</option>
+							<option></option>
+						</select>
+						<div id="align-content" class="properties-box mouseEffects">Select</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Align-items:</div>
+						<select class="properties-box">
+							<option>normal</option>
+							<option>stretch</option>
+							<option>center</option>
+							<option>start</option>
+							<option>end</option>
+							<option>flex-end</option>
+							<option>flex-start</option>
+							<option>baseline</option>
+							<option>first baseline</option>
+							<option>last baseline</option>
+							<option>self-start</option>
+							<option>self-end</option>
+							<option>safe center</option>
+							<option>unsafe center</option>
+							<option>inherit</option>
+							<option>initial</option>
+							<option>unset</option>
+							<option></option>
+						</select>
+						<div id="align-items" class="properties-box mouseEffects">Select</div>
+					</div>
+					<!-- This overrides align-items and is applied to a single element -->
+					<div class="properties-div">
+						<div class="properties-name">Align-self:</div>
+						<select class="properties-box">
+							<option></option>
+						</select>
+						<div id="align-self" class="properties-box mouseEffects">Select</div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Justify-content:</div>
+						<select class="properties-box">
+							<option>left</option>
+							<option>right</option>
+							<option>center</option>
+							<option>start</option>
+							<option>end</option>
+							<option>flex-end</option>
+							<option>flex-start</option>
+							<option>stretch</option>
+							<option>space-around</option>
+							<option>space-between</option>
+							<option>space-evenly</option>
+							<option>safe center</option>
+							<option>unsafe center</option>
+							<option>inherit</option>
+							<option>initial</option>
+							<option>unset</option>
+							<option>normal</option>
+						</select>
+						<div id="justify-content" class="properties-box mouseEffects">Select</div>
+					</div>
 				</div>
+				<!-- The grid layout properties go here -->
 				<div id="grid-prop">
 				</div>
 			</section>
