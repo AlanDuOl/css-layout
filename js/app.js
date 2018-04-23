@@ -10,8 +10,15 @@ layoutChoice();
 debug();
 
 function debug(){
-    // let el = document.getElementById("abc");
-    // console.log(el.textContent);
+    //let el = document.querySelectorAll("select");
+    let test = document.getElementById("test");
+    select.forEach(function(currentVal, index, lisObjs){
+        //console.log(currentVal.style.value);
+        if(currentVal.id == "flex-shrink"){
+            alert(test.value);
+        }
+    });
+    //console.log(test.value);
 }
 
 //Function to be loaded on strat
@@ -67,7 +74,7 @@ function propertiesChoice(val){
             currentVal.children[2].style.value = "inactive";
         }
         else if(currentVal.children[2] == val){
-            currentVal.children[1].style.value = "inactive"
+            currentVal.children[1].style.value = "inactive";
         }
         //Set the proper style to the exemple container element (layoutBox)
         //Loop through the childs and set the properties values
