@@ -7,6 +7,12 @@ let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
 layoutChoice();
+debug();
+
+function debug(){
+    // let el = document.getElementById("abc");
+    // console.log(el.textContent);
+}
 
 //Function to be loaded on strat
 function initialLoad(){
