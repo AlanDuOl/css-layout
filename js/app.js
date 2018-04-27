@@ -15,7 +15,7 @@ function debug(){
     select.forEach(function(currentVal, index, lisObjs){
         //console.log(currentVal.style.value);
         if(currentVal.id == "flex-shrink"){
-            alert(test.value);
+            //console.log(test.value);
         }
     });
     //console.log(test.value);
@@ -139,4 +139,25 @@ function getParameterByName(name, url) {
     if (!results) return null;
     if (!results[2]) return "";
     return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
