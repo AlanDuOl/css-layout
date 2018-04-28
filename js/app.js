@@ -9,16 +9,19 @@ mouseoverEffect();
 layoutChoice();
 debug();
 
-function debug(){
+function menuOption(val){
     //let el = document.querySelectorAll("select");
-    let test = document.getElementById("test");
-    select.forEach(function(currentVal, index, lisObjs){
-        //console.log(currentVal.style.value);
-        if(currentVal.id == "flex-shrink"){
-            //console.log(test.value);
+    let menu = document.querySelector("#flexShrinkDropdown");
+    for(let index = 0; index < menu.children.length;index++){
+        if(menu.children[index] == val && val.style.value == "active"){
+            menu.style.value = menu.children[index].textContent;
         }
-    });
-    //console.log(test.value);
+    }
+    console.log(menu.style.value);
+}
+
+function debug(){
+
 }
 
 //Function to be loaded on strat
@@ -59,6 +62,7 @@ function layoutChoice(){
                 grid.style.value = "inactive";
             }
             propertiesChoice(currentVal);
+            menuOption(currentVal);
             setColor();
             clearColor();
         });
@@ -144,7 +148,7 @@ function getParameterByName(name, url) {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("flexShrinkDropdown").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
