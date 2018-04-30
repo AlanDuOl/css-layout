@@ -9,15 +9,21 @@ mouseoverEffect();
 layoutChoice();
 debug();
 
+//Turn on and off the properties
 function menuOption(val){
-    //let el = document.querySelectorAll("select");
-    let menu = document.querySelector("#flexShrinkDropdown");
-    for(let index = 0; index < menu.children.length;index++){
-        if(menu.children[index] == val && val.style.value == "active"){
-            menu.style.value = menu.children[index].textContent;
-        }
-    }
-    console.log(menu.style.value);
+    //
+    let menu = document.querySelectorAll(".dropdown-content");
+    menu.forEach(function(currentVal, indx, lisObjs){
+            for(let index = 0; index < currentVal.children.length; index++){
+                if(currentVal.children[index] != val){
+                    currentVal.children[index].style.value = "inactive";
+                    //document.getElementById(currentVal.id+"-select").textContent = currentVal[currentVal.id+"-select"];
+                }else {
+                    layoutBox.style[currentVal.id] = currentVal.children[index].textContent;
+                    document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
+                }
+            }
+    });
 }
 
 function debug(){
@@ -61,34 +67,13 @@ function layoutChoice(){
                 flexLayoutProperties();
                 grid.style.value = "inactive";
             }
-            propertiesChoice(currentVal);
             menuOption(currentVal);
             setColor();
             clearColor();
         });
     });
 }
-//Turn on and off the properties
-function propertiesChoice(val){
-    //loop through the node and perform operations on the childs of its elements
-    parentNode.forEach(function(currentVal, index, lisObjs){
-        //Only childs 1 and 2 receive values
-        //So check the one who has been clicked and make its brother be inactive
-        if(currentVal.children[1] == val){
-            currentVal.children[2].style.value = "inactive";
-        }
-        else if(currentVal.children[2] == val){
-            currentVal.children[1].style.value = "inactive";
-        }
-        //Set the proper style to the exemple container element (layoutBox)
-        //Loop through the childs and set the properties values
-        if(currentVal.children[1].style.value == "active"){
-            layoutBox.style[currentVal.children[1].id] = currentVal.children[1].getAttribute("name");
-        }else if(currentVal.children[2].style.value == "active") {
-            layoutBox.style[currentVal.children[2].id] = currentVal.children[2].getAttribute("name");
-        }
-    });
-}
+
 //Set a background color for the clicked element
 function setColor(){
     //Loop through the clickeble elements and set its background color to green (only the content area)
@@ -147,8 +132,8 @@ function getParameterByName(name, url) {
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("flexShrinkDropdown").classList.toggle("show");
+function myFunction(parm) {
+    document.getElementById(parm).classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
