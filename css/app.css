@@ -1,20 +1,27 @@
 /* global variables */
 :root {
-  --height: 70vh;
+  --height: 100%;
 }
 
 /* page layout */
 * {
   box-sizing: border-box;
-  /* font:  */
+}
+
+body{
+    height: 100vh;
+    border: 0;
+    padding: 0;
 }
 
 h1 {
   text-align: center;
 }
 
+main,
 header {
-    padding: 5px;
+    width: 90%;
+    border-left: 40px;
 }
 
 .styles {
@@ -32,9 +39,16 @@ header {
 .header-text {
     grid-column-start: 1;
     grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+}
+
+#main-header {
     grid-row-start: 1;
     grid-row-end: 2;
-    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 #flex-global-prop {
@@ -63,16 +77,16 @@ header {
 #header-grid {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     text-align: center;
 }
 
 #header-flex {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     text-align: center;
 }
 
@@ -82,7 +96,7 @@ header {
     grid-auto-rows: minmax(30px, auto);
     grid-row-gap: 8px;
     grid-column-gap: 5px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 /* grid layout */
