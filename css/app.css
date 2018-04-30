@@ -30,11 +30,30 @@ header {
 }
 
 .header-text {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+}
+
+#flex-global-prop {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#flex-element-prop {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#flex-prop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: var(--height);
 }
 
 #display {
@@ -42,37 +61,37 @@ header {
 }
 
 #header-grid {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
 }
 
 #header-flex {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(30px, auto);
-  grid-row-gap: 8px;
-  grid-column-gap: 5px;
-  padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-row-gap: 8px;
+    grid-column-gap: 5px;
+    padding: 5px;
 }
 
 /* grid layout */
 #layout-container {
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(30px, auto);
     grid-row-gap: 5px;
-    grid-column-gap: 3px; */
+    grid-column-gap: 3px;
     grid-column-start: 1;
     grid-row-start: 2;
     grid-row-end: 4;
@@ -81,13 +100,14 @@ header {
 }
 
 .layout-properties {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(30px, auto);
-  grid-column-start: 2;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  height: var(--height);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    height: var(--height);
 }
 
 .sub-container {
