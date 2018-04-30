@@ -38,7 +38,7 @@ function initialLoad(){
 
 //function to be loaded wher grid layout is selected
 function gridLayoutProperties(){
-    document.getElementById("grid-prop").style.display = "block";
+    document.getElementById("grid-prop").style.display = "grid";
     document.getElementById("flex-prop").style.display = "none";
     layoutBox.style.display = "grid";
 }
@@ -46,7 +46,7 @@ function gridLayoutProperties(){
 //function to be loaded wher flex layout is selected
 function flexLayoutProperties(){
     document.getElementById("grid-prop").style.display = "none";
-    document.getElementById("flex-prop").style.display = "block";
+    document.getElementById("flex-prop").style.display = "grid";
     layoutBox.style.display = "flex";
 }
 
