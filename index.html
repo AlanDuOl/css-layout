@@ -29,30 +29,42 @@
 				</div>
 			</section>
 			<section class="layout-properties styles">
-				<div>Choose a porpertie</div>
 				<!--The flex layout properties go here  -->
 				<div id="flex-prop">
-					<!-- order of an specific element -->
-					<div class="properties-div">
-						<div class="properties-name">Element Order:</div>
-						<div name="row" id="align-content" class="properties-box mouseEffects">row</div>
-						<div name="column" id="align-content" class="properties-box mouseEffects">column</div>
-					</div>
+					<p>Global properties</p>
 					<div class="properties-div">
 						<div class="properties-name">Flex-direction:</div>
-						<div name="row" id="flex-direction" class="properties-box mouseEffects">row</div>
-						<div name="column" id="flex-direction" class="properties-box mouseEffects">column</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('flex-direction')" class="dropbtn">Select</button>
+	   				  		<div id="flex-direction" class="dropdown-content">
+	   						    <a id="test" class="mouseEffects" href="#">row</a>
+	   						    <a class="mouseEffects" href="#">column</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="flex-direction-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-wrap:</div>
-						<div id="flexWrap" name="wrap" class="properties-box mouseEffects">wrap</div>
-						<div id="flexWrap" name="nowrap" class="properties-box mouseEffects">nowrap</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('flex-wrap')" class="dropbtn">Select</button>
+	   				  		<div id="flex-wrap" class="dropdown-content">
+	   						    <a id="test" class="mouseEffects" href="#">wrap</a>
+	   						    <a class="mouseEffects" href="#">nowrap</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="flex-wrap-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-shrink:</div>
 						<div class="dropdown">
-	   				  		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-	   				  		<div id="flexShrinkDropdown" class="dropdown-content">
+	   				  		<button onclick="myFunction('flex-shrink')" class="dropbtn">Select</button>
+	   				  		<div id="flex-shrink" class="dropdown-content">
 	   						    <a id="test" class="mouseEffects" href="#">1</a>
 	   						    <a class="mouseEffects" href="#">2</a>
 	   						    <a class="mouseEffects" href="#">inherit</a>
@@ -60,123 +72,147 @@
 								<a class="mouseEffects" href="#">unset</a>
 	   				  		</div>
    						</div>
-						<div id="flex-shrink" class="properties-box mouseEffects">Select</div>
+						<div id="flex-shrink-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-grow:</div>
-						<select class="properties-box">
-							<option>3</option>
-							<option>0.6</option>
-							<option>inherit</option>
-							<option>initial</option>
-							<option>unset</option>
-						</select>
-						<div id="flex-grow" class="properties-box mouseEffects">Select</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('flex-grow')" class="dropbtn">Select</button>
+	   				  		<div id="flex-grow" class="dropdown-content">
+	   						    <a id="test" class="mouseEffects" href="#">1</a>
+	   						    <a class="mouseEffects" href="#">2</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="flex-grow-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Flex-basis:</div>
-						<select class="properties-box">
-							<option>10em</option>
-							<option>3px</option>
-							<option>auto</option>
-							<option>fill</option>
-							<option>max-content</option>
-							<option>min-content</option>
-							<option>fit-content</option>
-							<option>content</option>
-							<option>inherit</option>
-							<option>initial</option>
-							<option>unset</option>
-						</select>
-						<div id="flex-basis" class="properties-box mouseEffects">Select</div>
-					</div>
-					<div class="properties-div">
-						<div class="properties-name">Flex-shrink:</div>
-						<select class="properties-box">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-						</select>
-						<div id="flex-shrink" class="properties-box mouseEffects">Select</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('flex-basis')" class="dropbtn">Select</button>
+	   				  		<div id="flex-basis" class="dropdown-content">
+	   						    <a id="test" class="mouseEffects" href="#">10em</a>
+	   						    <a class="mouseEffects" href="#">3px</a>
+								<a class="mouseEffects" href="#">auto</a>
+								<a class="mouseEffects" href="#">fill</a>
+								<a class="mouseEffects" href="#">max-content</a>
+								<a class="mouseEffects" href="#">min-content</a>
+								<a class="mouseEffects" href="#">fit-content</a>
+								<a class="mouseEffects" href="#">content</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="flex-basis-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Align-content:</div>
-						<select class="properties-box">
-							<option>start</option>
-							<option>center</option>
-							<option>space-between</option>
-							<option>space-around</option>
-							<option>flex-start</option>
-							<option>flex-end</option>
-							<option>normal</option>
-							<option>baseline</option>
-							<option>first baseline</option>
-							<option>last baseline</option>
-							<option>space-evenly</option>
-							<option>stretch</option>
-							<option>safe center</option>
-							<option>unsafe center</option>
-							<option>inherit</option>
-							<option>initial</option>
-							<option>unset</option>
-							<option></option>
-						</select>
-						<div id="align-content" class="properties-box mouseEffects">Select</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('align-content')" class="dropbtn">Select</button>
+	   				  		<div id="align-content" class="dropdown-content">
+	   						    <a id="test" class="mouseEffects" href="#">start</a>
+	   						    <a class="mouseEffects" href="#">center</a>
+								<a class="mouseEffects" href="#">space-between</a>
+								<a class="mouseEffects" href="#">space-around</a>
+								<a class="mouseEffects" href="#">flex-start</a>
+								<a class="mouseEffects" href="#">flex-end</a>
+								<a class="mouseEffects" href="#">normal</a>
+								<a class="mouseEffects" href="#">baseline</a>
+								<a class="mouseEffects" href="#">first baseline</a>
+								<a class="mouseEffects" href="#">last baseline</a>
+								<a class="mouseEffects" href="#">space-evenly</a>
+								<a class="mouseEffects" href="#">stretch</a>
+								<a class="mouseEffects" href="#">safe center</a>
+								<a class="mouseEffects" href="#">unsafe center</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="align-content-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Align-items:</div>
-						<select class="properties-box">
-							<option>normal</option>
-							<option>stretch</option>
-							<option>center</option>
-							<option>start</option>
-							<option>end</option>
-							<option>flex-end</option>
-							<option>flex-start</option>
-							<option>baseline</option>
-							<option>first baseline</option>
-							<option>last baseline</option>
-							<option>self-start</option>
-							<option>self-end</option>
-							<option>safe center</option>
-							<option>unsafe center</option>
-							<option>inherit</option>
-							<option>initial</option>
-							<option>unset</option>
-							<option></option>
-						</select>
-						<div id="align-items" class="properties-box mouseEffects">Select</div>
-					</div>
-					<!-- This overrides align-items and is applied to a single element -->
-					<div class="properties-div">
-						<div class="properties-name">Align-self:</div>
-						<select class="properties-box">
-							<option></option>
-						</select>
-						<div id="align-self" class="properties-box mouseEffects">Select</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('align-items')" class="dropbtn">Select</button>
+	   				  		<div id="align-items" class="dropdown-content">
+	   						    <a class="mouseEffects" href="#">start</a>
+	   						    <a class="mouseEffects" href="#">center</a>
+								<a class="mouseEffects" href="#">space-between</a>
+								<a class="mouseEffects" href="#">space-around</a>
+								<a class="mouseEffects" href="#">end</a>
+								<a class="mouseEffects" href="#">self-start</a>
+								<a class="mouseEffects" href="#">self-end</a>
+								<a class="mouseEffects" href="#">flex-start</a>
+								<a class="mouseEffects" href="#">flex-end</a>
+								<a class="mouseEffects" href="#">normal</a>
+								<a class="mouseEffects" href="#">baseline</a>
+								<a class="mouseEffects" href="#">first baseline</a>
+								<a class="mouseEffects" href="#">last baseline</a>
+								<a class="mouseEffects" href="#">space-evenly</a>
+								<a class="mouseEffects" href="#">stretch</a>
+								<a class="mouseEffects" href="#">safe center</a>
+								<a class="mouseEffects" href="#">unsafe center</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="align-items-select" class="properties-box"></div>
 					</div>
 					<div class="properties-div">
 						<div class="properties-name">Justify-content:</div>
-						<select class="properties-box">
-							<option>left</option>
-							<option>right</option>
-							<option>center</option>
-							<option>start</option>
-							<option>end</option>
-							<option>flex-end</option>
-							<option>flex-start</option>
-							<option>stretch</option>
-							<option>space-around</option>
-							<option>space-between</option>
-							<option>space-evenly</option>
-							<option>safe center</option>
-							<option>unsafe center</option>
-							<option>inherit</option>
-							<option>initial</option>
-							<option>unset</option>
-							<option>normal</option>
-						</select>
-						<div id="justify-content" class="properties-box mouseEffects">Select</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('justify-content')" class="dropbtn">Select</button>
+	   				  		<div id="justify-content" class="dropdown-content">
+								<a class="mouseEffects" href="#">normal</a>
+	   						    <a class="mouseEffects" href="#">start</a>
+								<a class="mouseEffects" href="#">right</a>
+	   						    <a class="mouseEffects" href="#">center</a>
+								<a class="mouseEffects" href="#">left</a>
+								<a class="mouseEffects" href="#">end</a>
+								<a class="mouseEffects" href="#">space-between</a>
+								<a class="mouseEffects" href="#">space-around</a>
+								<a class="mouseEffects" href="#">flex-start</a>
+								<a class="mouseEffects" href="#">flex-end</a>
+								<a class="mouseEffects" href="#">space-evenly</a>
+								<a class="mouseEffects" href="#">stretch</a>
+								<a class="mouseEffects" href="#">safe center</a>
+								<a class="mouseEffects" href="#">unsafe center</a>
+	   						    <a class="mouseEffects" href="#">inherit</a>
+								<a class="mouseEffects" href="#">initial</a>
+								<a class="mouseEffects" href="#">unset</a>
+	   				  		</div>
+   						</div>
+						<div id="justify-content-select" class="properties-box"></div>
+					</div>
+					<!-- The following properties are element specific and thus override the global properties -->
+					<div class="properties-div">
+						<div class="properties-name">Align-self:</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('align-self')" class="dropbtn">Select</button>
+	   				  		<div id="align-self" class="dropdown-content">
+								<a class="mouseEffects" href="#"></a>
+	   						    <a class="mouseEffects" href="#"></a>
+								<a class="mouseEffects" href="#"></a>
+	   				  		</div>
+   						</div>
+						<div id="align-self-select" class="properties-box"></div>
+					</div>
+					<div class="properties-div">
+						<div class="properties-name">Element Order:</div>
+						<div class="dropdown">
+	   				  		<button onclick="myFunction('element-order')" class="dropbtn">Select</button>
+	   				  		<div id="element-order" class="dropdown-content">
+								<a class="mouseEffects" href="#"></a>
+	   						    <a class="mouseEffects" href="#"></a>
+								<a class="mouseEffects" href="#"></a>
+	   				  		</div>
+   						</div>
+						<div id="element-order-select" class="properties-box"></div>
 					</div>
 				</div>
 				<!-- The grid layout properties go here -->
