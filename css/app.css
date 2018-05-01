@@ -20,7 +20,7 @@ h1 {
 
 main,
 header {
-    width: 90%;
+    /* width: 90%; */
     border-left: 40px;
 }
 
@@ -124,31 +124,29 @@ header {
     height: var(--height);
 }
 
-.sub-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-start: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
 .box {
   border: 1px solid gray;
   border-radius: 5px;
 }
 
+.box-one {
+    width: 50%;
+    height: 50%;
+}
+
 .box-two {
-  /* grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  z-index: 2; */
+    width: 50%;
+    height: 50%;
 }
 
 .box-three {
-  /* grid-column-start: 3;
-  grid-row-start: 1;
-  grid-row-end: 6;
-  z-index: 1; */
+    width: 50%;
+    height: 50%;
+}
+
+.box-four {
+    width: 50%;
+    height: 50%;
 }
 
 /* flex layout */
