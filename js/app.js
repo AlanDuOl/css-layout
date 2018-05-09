@@ -7,7 +7,18 @@ let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
 layoutChoice();
+addBox();
 debug();
+
+function addBox(){
+    let btn = document.getElementById("addButton");
+    btn.addEventListener("click", function(){
+        let container = document.getElementById("layout-container");
+        let element = document.createElement("div");
+        let child = container.appendChild(element);
+        child.classList.toggle("initial-box");
+    });
+}
 
 //Turn on and off the properties
 function menuOption(val){
@@ -34,6 +45,7 @@ function debug(){
 function initialLoad(){
     document.getElementById("grid-prop").style.display = "none";
     document.getElementById("flex-prop").style.display = "none";
+    //document.getElementById("layout-container").style.display = "block";
 }
 
 //function to be loaded wher grid layout is selected
