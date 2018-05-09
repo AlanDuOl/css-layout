@@ -1,0 +1,7 @@
+-Write grid properties on html
+-Review css classes:
+	-Look for redundances;
+	-Eliminate useless classes.
+-Implant block instertions:
+	-Create the ability to insert new blocks on the layout exemple;
+	-Make possible to edit blocks individually.
