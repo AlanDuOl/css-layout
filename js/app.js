@@ -45,7 +45,7 @@ function debug(){
 function initialLoad(){
     document.getElementById("grid-prop").style.display = "none";
     document.getElementById("flex-prop").style.display = "none";
-    //document.getElementById("layout-container").style.display = "block";
+    document.getElementById("layout-container").style.display = "block";
 }
 
 //function to be loaded wher grid layout is selected
