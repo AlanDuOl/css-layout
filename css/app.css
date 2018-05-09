@@ -131,24 +131,10 @@ header {
   border-radius: 5px;
 }
 
-.box-one {
-    width: 50%;
-    height: 50%;
-}
-
-.box-two {
-    width: 50%;
-    height: 50%;
-}
-
-.box-three {
-    width: 50%;
-    height: 50%;
-}
-
-.box-four {
-    width: 50%;
-    height: 50%;
+.initial-box {
+    width: 25%;
+    height: 25%;
+    border: 1px solid gray;
 }
 
 /* flex layout */
