@@ -61,7 +61,26 @@ header {
     grid-column-end: 3;
 }
 
+#grid-global-prop {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#grid-element-prop {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
 #flex-prop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: var(--height);
+}
+
+#grid-prop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(30px, auto);
