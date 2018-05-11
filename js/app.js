@@ -1,7 +1,5 @@
 
 let select = document.querySelectorAll(".mouseEffects");
-//if flex-prop or grid-prop
-//Get the parent node
 let parentNode = document.querySelectorAll(".properties-div");
 let layoutBox = document.getElementById("layout-container");
 
@@ -46,6 +44,8 @@ function initialLoad(){
     document.getElementById("grid-prop").style.display = "none";
     document.getElementById("flex-prop").style.display = "none";
     document.getElementById("layout-container").style.display = "block";
+    document.getElementById("grid-element-prop").style.display = "none";
+    document.getElementById("flex-element-prop").style.display = "none";
 }
 
 //function to be loaded wher grid layout is selected
