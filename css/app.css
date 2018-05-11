@@ -1,6 +1,6 @@
 /* global variables */
 :root {
-  --height: 100%;
+  --height: 65vh;
 }
 
 /* page layout */
@@ -101,6 +101,8 @@ header {
 
 /* grid layout */
 #layout-container {
+    /* transform property added in order for the addBtn fixed position to work properly */
+    transform: scale(1);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(30px, auto);
@@ -129,24 +131,10 @@ header {
   border-radius: 5px;
 }
 
-.box-one {
-    width: 50%;
-    height: 50%;
-}
-
-.box-two {
-    width: 50%;
-    height: 50%;
-}
-
-.box-three {
-    width: 50%;
-    height: 50%;
-}
-
-.box-four {
-    width: 50%;
-    height: 50%;
+.initial-box {
+    width: 25%;
+    height: 25%;
+    border: 1px solid gray;
 }
 
 /* flex layout */
@@ -190,6 +178,18 @@ header {
 
 .mouseEffects {
 
+}
+
+#addButton {
+    /* to be fixed relative to the parent the latest must have transforme, perspective or filter properties */
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    background-color: green;
+    text-align: center;
+    width: 10%;
+    height: 5%;
+    border-radius: 5px;
 }
 
  /* Dropdown Button */
