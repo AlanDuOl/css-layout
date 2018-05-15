@@ -1,6 +1,7 @@
 let box = document.querySelectorAll(".initial-box");
 let select = document.querySelectorAll(".mouseEffects");
-let parentNode = document.querySelectorAll(".global-properties-div");
+//let parentNode = document.querySelectorAll(".global-properties-div");
+//let elementPropsNode = document.querySelectorAll(".element-properties-div");
 let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
@@ -35,10 +36,6 @@ function deactivateBoxNode(boxNode){
         currentVal.style.border = "1px solid gray";
     });
 }
-//
-// function editBox(boxNode){
-//
-// }
 
 function selectBox(boxNode){
 
@@ -61,6 +58,17 @@ function selectBox(boxNode){
             currentVal.style.transform = "scale(1) translate3d(0,0,0)";
             currentVal.style.boxShadow = "0px 0px 0px #000";
         });
+    });
+}
+
+function setElementProps(){
+    let menu = document.querySelectorAll(".element-dropdown-content");
+    menu.forEach(function(currentVal, indx, lisObjs){
+        console.log(currentVal);
+        if(currentVal.style.value == "active"){
+            currentVal.style[currentVal.id] = currentVal.children[index].textContent;
+            document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
+        }
     });
 }
 
@@ -194,9 +202,16 @@ window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
 
     var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
+    var elementDropdowns = document.getElementsByClassName("element-dropdown-content");
+
+    for (var i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+    for (var i = 0; i < elementDropdowns.length; i++) {
+      var openDropdown = elementDropdowns[i];
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
