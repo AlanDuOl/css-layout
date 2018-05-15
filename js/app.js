@@ -1,4 +1,4 @@
-
+let box = document.querySelectorAll(".initial-box");
 let select = document.querySelectorAll(".mouseEffects");
 let parentNode = document.querySelectorAll(".properties-div");
 let layoutBox = document.getElementById("layout-container");
@@ -15,6 +15,37 @@ function addBox(){
         let element = document.createElement("div");
         let child = container.appendChild(element);
         child.classList.toggle("initial-box");
+        editBox(document.querySelectorAll(".initial-box"));
+    });
+}
+
+function inactivateBoxNode(boxNode){
+    boxNode.forEach(function(currentVal, index, lisObjs){
+        currentVal.style.value = "inactive";
+        currentVal.style.border = "1px solid gray";
+    });
+}
+
+function editBox(boxNode){
+
+    boxNode.forEach(function(currentVal, index, lisObjs){
+        currentVal.addEventListener("click", function(){
+            inactivateBoxNode(boxNode);
+            currentVal.style.border = "5px solid gray";
+            currentVal.style.value = "active";
+        });
+        currentVal.addEventListener("mouseover", function() {
+            //Add Mouse effect
+            //currentVal.style.boxShadow = "1px 1px 0 3px hsl(0, 0%, 90%), 1px 1px 0 6px hsl(0, 0%, 60%), 1px 1px 0 10px hsl(0, 0%, 30%)";
+            currentVal.style.transform = "scale(1) translate3d(-2px,0,0)";
+            currentVal.style.boxShadow = "2px 2px gray";
+            currentVal.style.cursor = "pointer";
+            //Enable editing
+        });
+        currentVal.addEventListener("mouseout", function() {
+            currentVal.style.transform = "scale(1) translate3d(0,0,0)";
+            currentVal.style.boxShadow = "0px 0px 0px #000";
+        });
     });
 }
 
