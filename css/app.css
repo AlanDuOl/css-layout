@@ -174,7 +174,7 @@ header {
   height: var(--height);
 }
 
-.properties-div {
+.global-properties-div {
   display: flex;
   justify-content: space-around;
   text-align: center;
