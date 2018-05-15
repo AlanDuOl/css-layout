@@ -6,7 +6,15 @@ let layoutBox = document.getElementById("layout-container");
 mouseoverEffect();
 layoutChoice();
 addBox();
-debug();
+
+
+function debug(node){
+    node.forEach(function(currentVal, index, lisObjs){
+        if(currentVal.style.value = "active"){
+            console.log(currentVal);
+        }
+    });
+}
 
 function addBox(){
     let btn = document.getElementById("addButton");
@@ -15,7 +23,8 @@ function addBox(){
         let element = document.createElement("div");
         let child = container.appendChild(element);
         child.classList.toggle("initial-box");
-        editBox(document.querySelectorAll(".initial-box"));
+        selectBox(document.querySelectorAll(".initial-box"));
+        debug(document.querySelectorAll(".initial-box"));
     });
 }
 
@@ -25,8 +34,12 @@ function inactivateBoxNode(boxNode){
         currentVal.style.border = "1px solid gray";
     });
 }
+// 
+// function editBox(boxNode){
+//
+// }
 
-function editBox(boxNode){
+function selectBox(boxNode){
 
     boxNode.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("click", function(){
@@ -64,10 +77,6 @@ function menuOption(val){
                 }
             }
     });
-}
-
-function debug(){
-
 }
 
 //Function to be loaded on strat
