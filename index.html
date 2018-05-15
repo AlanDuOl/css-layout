@@ -24,8 +24,8 @@
 				<!--The flex layout properties go here  -->
 				<div id="flex-prop">
 					<div id="flex-global-prop">
-						<div class="properties-div"><h3>Global properties</h3></div>
-						<div class="properties-div">
+						<div class="global-properties-div"><h3>Global properties</h3></div>
+						<div class="global-properties-div">
 							<div class="properties-name">Flex-direction:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('flex-direction')" class="dropbtn">Select</button>
@@ -39,7 +39,7 @@
 	   						</div>
 							<div id="flex-direction-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Flex-wrap:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('flex-wrap')" class="dropbtn">Select</button>
@@ -53,7 +53,7 @@
 	   						</div>
 							<div id="flex-wrap-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Flex-shrink:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('flex-shrink')" class="dropbtn">Select</button>
@@ -67,7 +67,7 @@
 	   						</div>
 							<div id="flex-shrink-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Flex-grow:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('flex-grow')" class="dropbtn">Select</button>
@@ -81,7 +81,7 @@
 	   						</div>
 							<div id="flex-grow-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Flex-basis:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('flex-basis')" class="dropbtn">Select</button>
@@ -101,7 +101,7 @@
 	   						</div>
 							<div id="flex-basis-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Align-content:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('align-content')" class="dropbtn">Select</button>
@@ -127,7 +127,7 @@
 	   						</div>
 							<div id="align-content-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Align-items:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('align-items')" class="dropbtn">Select</button>
@@ -156,7 +156,7 @@
 	   						</div>
 							<div id="align-items-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Justify-content:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('justify-content')" class="dropbtn">Select</button>
@@ -183,10 +183,10 @@
 							<div id="justify-content-select" class="properties-box"></div>
 						</div>
 					</div>
+					<!-- The following properties are element specific and thus override the global properties -->
 					<div id="flex-element-prop">
-						<div  class="properties-div"><h3>Element properties</h3></div>
-						<!-- The following properties are element specific and thus override the global properties -->
-						<div class="properties-div">
+						<div  class="element-properties-div"><h3>Element properties</h3></div>
+						<div class="element-properties-div">
 							<div class="properties-name">Align-self:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('align-self')" class="dropbtn">Select</button>
@@ -198,7 +198,7 @@
 	   						</div>
 							<div id="align-self-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="element-properties-div">
 							<div class="properties-name">Element Order:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('element-order')" class="dropbtn">Select</button>
@@ -215,8 +215,8 @@
 				<!-- The grid layout properties go here -->
 				<div id="grid-prop">
 					<div id="grid-global-prop">
-						<div class="properties-div"><h3>Global properties</h3></div>
-						<div class="properties-div">
+						<div class="global-properties-div"><h3>Global properties</h3></div>
+						<div class="global-properties-div">
 							<div class="properties-name">Grid-template-columns:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-template-columns')" class="dropbtn">Select</button>
@@ -234,7 +234,7 @@
 	   						</div>
 							<div id="grid-template-columns-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Grid-template-rows:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-template-rows')" class="dropbtn">Select</button>
@@ -252,7 +252,7 @@
 	   						</div>
 							<div id="grid-template-rows-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Grid-auto-columns:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-auto-columns')" class="dropbtn">Select</button>
@@ -272,7 +272,7 @@
 	   						</div>
 							<div id="grid-auto-columns-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Grid-auto-rows:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-auto-rows')" class="dropbtn">Select</button>
@@ -292,7 +292,7 @@
 	   						</div>
 							<div id="grid-auto-rows-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Grid-auto-flow:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-auto-flow')" class="dropbtn">Select</button>
@@ -309,7 +309,7 @@
 	   						</div>
 							<div id="grid-auto-flow-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Column-gap:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('column-gap')" class="dropbtn">Select</button>
@@ -325,7 +325,7 @@
 	   						</div>
 							<div id="column-gap-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="global-properties-div">
 							<div class="properties-name">Row-gap:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('row-gap')" class="dropbtn">Select</button>
@@ -343,9 +343,9 @@
 						</div>
 					</div>
 					<div id="grid-element-prop">
-						<div  class="properties-div"><h3>Element properties</h3></div>
+						<div  class="element-properties-div"><h3>Element properties</h3></div>
 						<!-- The following properties are element specific and thus override the global properties -->
-						<div class="properties-div">
+						<div class="element-properties-div">
 							<div class="properties-name">Grid-column-start:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-column-start')" class="dropbtn">Select</button>
@@ -359,7 +359,7 @@
 	   						</div>
 							<div id="grid-column-start-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="element-properties-div">
 							<div class="properties-name">Grid-column-end:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-column-end')" class="dropbtn">Select</button>
@@ -374,7 +374,7 @@
 	   						</div>
 							<div id="grid-column-end-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="element-properties-div">
 							<div class="properties-name">Grid-row-start:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-row-start')" class="dropbtn">Select</button>
@@ -388,7 +388,7 @@
 	   						</div>
 							<div id="grid-row-start-select" class="properties-box"></div>
 						</div>
-						<div class="properties-div">
+						<div class="element-properties-div">
 							<div class="properties-name">Grid-row-end:</div>
 							<div class="dropdown">
 		   				  		<button onclick="myFunction('grid-row-end')" class="dropbtn">Select</button>
