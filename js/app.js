@@ -1,6 +1,6 @@
 let box = document.querySelectorAll(".initial-box");
 let select = document.querySelectorAll(".mouseEffects");
-let parentNode = document.querySelectorAll(".properties-div");
+let parentNode = document.querySelectorAll(".global-properties-div");
 let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
@@ -8,10 +8,12 @@ layoutChoice();
 addBox();
 
 
-function debug(node){
+function showElementProps(node){
     node.forEach(function(currentVal, index, lisObjs){
-        if(currentVal.style.value = "active"){
-            console.log(currentVal);
+        if(currentVal.style.value == "active" && document.getElementById("header-grid").style.value == "active"){
+            document.getElementById("grid-element-prop").style.display = "block";
+        }else if(currentVal.style.value == "active" && document.getElementById("header-flex").style.value == "active"){
+            document.getElementById("flex-element-prop").style.display = "block";
         }
     });
 }
@@ -24,17 +26,16 @@ function addBox(){
         let child = container.appendChild(element);
         child.classList.toggle("initial-box");
         selectBox(document.querySelectorAll(".initial-box"));
-        debug(document.querySelectorAll(".initial-box"));
     });
 }
 
-function inactivateBoxNode(boxNode){
+function deactivateBoxNode(boxNode){
     boxNode.forEach(function(currentVal, index, lisObjs){
         currentVal.style.value = "inactive";
         currentVal.style.border = "1px solid gray";
     });
 }
-// 
+//
 // function editBox(boxNode){
 //
 // }
@@ -43,9 +44,10 @@ function selectBox(boxNode){
 
     boxNode.forEach(function(currentVal, index, lisObjs){
         currentVal.addEventListener("click", function(){
-            inactivateBoxNode(boxNode);
+            deactivateBoxNode(boxNode);
             currentVal.style.border = "5px solid gray";
             currentVal.style.value = "active";
+            showElementProps(document.querySelectorAll(".initial-box"));
         });
         currentVal.addEventListener("mouseover", function() {
             //Add Mouse effect
@@ -70,7 +72,6 @@ function menuOption(val){
             for(let index = 0; index < currentVal.children.length; index++){
                 if(currentVal.children[index] != val){
                     currentVal.children[index].style.value = "inactive";
-                    //document.getElementById(currentVal.id+"-select").textContent = currentVal[currentVal.id+"-select"];
                 }else {
                     layoutBox.style[currentVal.id] = currentVal.children[index].textContent;
                     document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
