@@ -5,3 +5,10 @@
 	-Make possible to edit blocks individually.
 	-Grab the individual block properties.
 	-Add more individual block properties in html.
+-Make a map of the project
+
+-Clean background-color of "inactive" clicables;
+-Make clicable elements "active";
+-All elements are "inactive" by default;
+-Get elements properties value on click;
+-Show elements properties value on click;

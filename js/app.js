@@ -6,8 +6,8 @@ let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
 layoutChoice();
+setElementProps();
 addBox();
-
 
 function showElementProps(node){
     node.forEach(function(currentVal, index, lisObjs){
@@ -61,13 +61,35 @@ function selectBox(boxNode){
     });
 }
 
-function setElementProps(){
+function propertiesChoice(){
+    select.forEach(function(currentVal, index, lisObjs){
+        currentVal.addEventListener("click", function(){
+            currentVal.style.value = "active";
+            if(currentVal.id == "header-grid"){
+                gridLayoutProperties();
+                flex.style.value = "inactive";
+            }
+            if(currentVal.id == "header-flex"){
+                flexLayoutProperties();
+                grid.style.value = "inactive";
+            }
+            menuOption(currentVal);
+            setColor();
+            clearColor();
+        });
+    });
+}
+
+function setElementProps(val){
     let menu = document.querySelectorAll(".element-dropdown-content");
     menu.forEach(function(currentVal, indx, lisObjs){
-        console.log(currentVal);
+
         if(currentVal.style.value == "active"){
+            console.log(currentVal.style.value);
             currentVal.style[currentVal.id] = currentVal.children[index].textContent;
             document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
+        }else {
+            currentVal.style.value == "inactive";
         }
     });
 }
