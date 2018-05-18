@@ -1,4 +1,3 @@
-let box = document.querySelectorAll(".initial-box");
 let select = document.querySelectorAll(".mouseEffects");
 //let parentNode = document.querySelectorAll(".global-properties-div");
 //let elementPropsNode = document.querySelectorAll(".element-properties-div");
@@ -6,7 +5,6 @@ let layoutBox = document.getElementById("layout-container");
 
 mouseoverEffect();
 layoutChoice();
-setElementProps();
 addBox();
 
 function showElementProps(node){
@@ -26,6 +24,7 @@ function addBox(){
         let element = document.createElement("div");
         let child = container.appendChild(element);
         child.classList.toggle("initial-box");
+        child.style.value = "active";
         selectBox(document.querySelectorAll(".initial-box"));
     });
 }
@@ -38,14 +37,16 @@ function deactivateBoxNode(boxNode){
 }
 
 function selectBox(boxNode){
-
+    //Loop through box node
     boxNode.forEach(function(currentVal, index, lisObjs){
+        //Select box node
         currentVal.addEventListener("click", function(){
             deactivateBoxNode(boxNode);
             currentVal.style.border = "5px solid gray";
             currentVal.style.value = "active";
             showElementProps(document.querySelectorAll(".initial-box"));
         });
+    //Apply mouse effects on box node
         currentVal.addEventListener("mouseover", function() {
             //Add Mouse effect
             //currentVal.style.boxShadow = "1px 1px 0 3px hsl(0, 0%, 90%), 1px 1px 0 6px hsl(0, 0%, 60%), 1px 1px 0 10px hsl(0, 0%, 30%)";
@@ -61,35 +62,23 @@ function selectBox(boxNode){
     });
 }
 
-function propertiesChoice(){
-    select.forEach(function(currentVal, index, lisObjs){
-        currentVal.addEventListener("click", function(){
-            currentVal.style.value = "active";
-            if(currentVal.id == "header-grid"){
-                gridLayoutProperties();
-                flex.style.value = "inactive";
-            }
-            if(currentVal.id == "header-flex"){
-                flexLayoutProperties();
-                grid.style.value = "inactive";
-            }
-            menuOption(currentVal);
-            setColor();
-            clearColor();
-        });
-    });
-}
-
 function setElementProps(val){
-    let menu = document.querySelectorAll(".element-dropdown-content");
-    menu.forEach(function(currentVal, indx, lisObjs){
-
+    //Grab the inserted boxes node
+    let box = document.querySelectorAll(".initial-box");
+    //Loop through the node
+    box.forEach(function(currentVal, indx, lisObjs){
         if(currentVal.style.value == "active"){
-            console.log(currentVal.style.value);
-            currentVal.style[currentVal.id] = currentVal.children[index].textContent;
-            document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
-        }else {
-            currentVal.style.value == "inactive";
+            let activeProperties = document.querySelectorAll(".element-dropdown-content");
+            activeProperties.forEach(function(props, indx, lisObjs){
+                for(let index = 0; index < props.children.length; index++){
+                    if(props.children[index] == val){
+                        currentVal.style[props.id] = props.children[index].textContent;
+                        document.getElementById(props.id+"-select").textContent = props.children[index].textContent;
+                    }else {
+                        props.children[index].style.value = "inactive";
+                    }
+                }
+            });
         }
     });
 }
@@ -99,14 +88,14 @@ function menuOption(val){
     //
     let menu = document.querySelectorAll(".dropdown-content");
     menu.forEach(function(currentVal, indx, lisObjs){
-            for(let index = 0; index < currentVal.children.length; index++){
-                if(currentVal.children[index] != val){
-                    currentVal.children[index].style.value = "inactive";
-                }else {
-                    layoutBox.style[currentVal.id] = currentVal.children[index].textContent;
-                    document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
-                }
+        for(let index = 0; index < currentVal.children.length; index++){
+            if(currentVal.children[index] != val){
+                currentVal.children[index].style.value = "inactive";
+            }else {
+                layoutBox.style[currentVal.id] = currentVal.children[index].textContent;
+                document.getElementById(currentVal.id+"-select").textContent = currentVal.children[index].textContent;
             }
+        }
     });
 }
 
@@ -151,6 +140,7 @@ function layoutChoice(){
                 grid.style.value = "inactive";
             }
             menuOption(currentVal);
+            setElementProps(currentVal);
             setColor();
             clearColor();
         });
